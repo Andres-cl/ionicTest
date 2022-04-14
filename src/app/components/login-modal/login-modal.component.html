@@ -1,0 +1,48 @@
+
+<div class="login-modal">
+  <form name="loginForm" class="form ion-margin-top" (ngSubmit)="acceder()" [formGroup]="loginForm">
+    <ion-item class="ion-padding-horizontal ion-margin-top">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-input clearInput inputmode="email" type="email" placeholder="email" name="email" required></ion-input>
+    </ion-item>
+    <div class="danger"
+      *ngIf="loginForm.get('email')!.touched && isInvalidForm">
+      <ion-text color="danger">
+        <small class="form-text text-danger" *ngIf="loginForm.get('email')?.errors?.required">
+          El campo es requerido
+        </small>
+      </ion-text>
+      <ion-text color="danger">
+        <small class="form-text text-danger" *ngIf="loginForm.get('email')?.errors?.email">
+          El campo debe ser con formato de email
+        </small>
+      </ion-text>
+    </div>
+    <ion-item class="ion-padding-horizontal ion-margin-top">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input clearInput minlength="5" type="password" placeholder="Contraseña" name="password" required></ion-input>
+    </ion-item>
+    <div class="danger"
+      *ngIf="loginForm.get('password')!.touched && isInvalidForm">
+      <ion-text color="danger">
+        <small class="form-text text-danger" *ngIf="loginForm.get('password')?.errors?.required">
+          El campo es requerido
+        </small>
+      </ion-text>
+      <ion-text color="danger">
+        <small class="form-text text-danger" *ngIf="loginForm.get('password')?.errors?.minlength">
+          Longitud mínima 5 caracteres
+        </small>
+      </ion-text>
+    </div>
+    <div class="remember-me">
+      <ion-text>
+        <span>Recordar</span>
+      </ion-text>
+      <ion-toggle name="recordar" mode="md"></ion-toggle>
+    </div>
+    <ion-button class="ion-no-margin" type="submit" expand="full">Acceder</ion-button>
+  </form>
+</div>
+
+

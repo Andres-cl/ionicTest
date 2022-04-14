@@ -1,0 +1,51 @@
+
+  .login-modal{
+    align-self: center;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .login-modal-header {
+      display: contents;
+
+      .title{
+        margin-top: 20px;
+        font-size: 1.3rem;
+        text-align: center;
+      }
+    }
+
+    .form{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      ion-icon{
+        color: darkgray;
+      }
+      .danger{
+        margin-left: 20px;
+      }
+    }
+
+    .remember-me{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 25px;
+      padding-right: 14px;
+      ion-text{
+        line-height: 2.5;
+      }
+    }
+  }
+ion-item{
+  margin-top: 0.5rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+

@@ -1,0 +1,31 @@
+ion-content{
+  --background: url('../../../assets/images/background.jpg') no-repeat center center / cover;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.img-container{
+  display: flex;
+  justify-content: center;
+
+  .img-logo{
+    width: 125px;
+    height: 125px;
+  }
+}
+
+ion-row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+ion-grid{
+  height: 100%;
+}
+ion-row{
+  height: 100%;
+}
+
